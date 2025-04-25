@@ -62,6 +62,9 @@ int main(void)
 }
      if(k>='a'&&k<='n'){
      for (int i = k; i >= 'a'; i--) {
+     	for(int l=i-1;l>=1;l--){
+     		printf(" ");
+		 }
                     for (j = i; j <= k; j++) {
                         printf("%c", j);
                     }
