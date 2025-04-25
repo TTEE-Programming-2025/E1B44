@@ -73,6 +73,20 @@ int main(void)
     scanf(" %d",&h);
             }
         }
+         if(m=='C'||m=='c'){
+        	system("cls");
+        	printf("continue? (y/n):");
+        	scanf(" %C",&l);
+        	while(l!='Y'||l!='y'||l!='n'||l!='N'){
+        	printf("錯誤訊息重新輸入\n");
+        	printf("continue? (y/n):");
+        	scanf(" %C",&l);
+        }if(l=='y'||l=='Y'){
+          system("cls");
+      }
+      if(l=='n'||l=='N')
+      return 0;
+        }
      if(k>='a'&&k<='n'){
      for (int i = k; i >= 'a'; i--) {
      	for(int l=i-1;l>='a';l--){
@@ -89,7 +103,9 @@ int main(void)
             if(h<=9&&h>=1){
         	for(a=1;a<=h;a++){
         		for(n=1;n<=h;n++)
-        	   printf(" %d*%d=%2d",n,a,n*a);	
+        	   printf(" %d*%d=%2d",n,a,n*a);{
+			   printf("\n");
+			   }	
         }
         	system("pause");
         	system("cls");
