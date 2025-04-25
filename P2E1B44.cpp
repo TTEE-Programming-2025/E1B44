@@ -39,6 +39,7 @@ int main(void)
   return 0;}
   }while(n<3);
   system("cls");/*清除當前畫面*/ 
+  for(;;){
     printf("$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 	printf("(                        )\n");
 	printf("(      a.直角三角形      )\n");
@@ -62,7 +63,7 @@ int main(void)
 }
      if(k>='a'&&k<='n'){
      for (int i = k; i >= 'a'; i--) {
-     	for(int l=i-1;l>=1;l--){
+     	for(int l=i-1;l>='a';l--){
      		printf(" ");
 		 }
                     for (j = i; j <= k; j++) {
@@ -73,6 +74,7 @@ int main(void)
                 system("pause");
                 system("cls");
             }
+}
 }
 }
 	 
