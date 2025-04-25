@@ -49,7 +49,8 @@ int main(void)
 	printf("(      c.結束            )\n");
 	printf("(                        )\n");
 	printf("$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
-	char m,j,k;
+	int h,a,n; 
+	char m,j,k,l;
 	printf("請輸入個英文字母:");
 	scanf(" %c",&m);
 	if(m=='a'||m=='A'){
@@ -61,6 +62,17 @@ int main(void)
     printf("輸入a-n其中一個字母:");
     scanf(" %c",&k);
 }
+}
+	if(m=='b'||m=='B'){
+			system("cls");/*清除當前畫面*/ 
+    printf("輸入1-9其中一個數字:");
+    scanf(" %d",&h); 
+    while(h>9||h<1) {
+    printf("請重新輸入\n");
+    printf("輸入1-9其中一個數字:");
+    scanf(" %d",&h);
+            }
+        }
      if(k>='a'&&k<='n'){
      for (int i = k; i >= 'a'; i--) {
      	for(int l=i-1;l>='a';l--){
@@ -74,7 +86,17 @@ int main(void)
                 system("pause");
                 system("cls");
             }
+            if(h<=9&&h>=1){
+        	for(a=1;a<=h;a++){
+        		for(n=1;n<=h;n++)
+        	   printf(" %d*%d=%2d",n,a,n*a);	
+        }
+        	system("pause");
+        	system("cls");
+		}
+        }
+        
 }
-}
-}
-	 
+
+
+  
