@@ -38,10 +38,38 @@ int main(void)
   printf("錯誤三次不能輸入了");
   return 0;}
   }while(n<3);
-  system("pause");/*停止當前畫面*/ 
   system("cls");/*清除當前畫面*/ 
-  
-  
+    printf("$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+	printf("(                        )\n");
+	printf("(      a.直角三角形      )\n");
+	printf("(                        )\n");
+	printf("(      b.顯示乘法表      )\n");
+	printf("(                        )\n");
+	printf("(      c.結束            )\n");
+	printf("(                        )\n");
+	printf("$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+	char m,j,k;
+	printf("請輸入個英文字母:");
+	scanf(" %c",&m);
+	if(m=='a'||m=='A'){
+    system("cls");/*清除當前畫面*/ 
+    printf("輸入a-n其中一個字母:");
+    scanf(" %c",&k); 
+    while(k<'a'||k>'n') {
+    printf("請重新輸入\n");
+    printf("輸入a-n其中一個字母:");
+    scanf(" %c",&k);
 }
-  
-  
+     if(k>='a'&&k<='n'){
+     for (int i = k; i >= 'a'; i--) {
+                    for (j = i; j <= k; j++) {
+                        printf("%c", j);
+                    }
+                    printf("\n");
+                }
+                system("pause");
+                system("cls");
+            }
+}
+}
+	 
