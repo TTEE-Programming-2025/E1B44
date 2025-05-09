@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h> 
 int main(void)
 {
 	printf("$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
@@ -39,6 +40,7 @@ int main(void)
   return 0;}
   }while(n<3);
   system("cls");/*清除當前畫面*/ 
+  for(;;){
     printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 	printf("(                                   )\n");
 	printf("(        a.Available seats          )\n");
@@ -50,5 +52,36 @@ int main(void)
 	printf("(        d. Exit                    )\n");
 	printf("(                                   )\n");
 	printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
-	} 
-	
+	int  number=0;
+	char seat[9][9],m;
+	printf("請輸入個英文字母:");
+	scanf(" %c",&m);
+	if(m=='a'||m=='A'){
+	system("cls");
+	for(int i=1;i<=9;i++){
+		for(int j=1;j<=9;j++){
+		seat[i][j]='-';
+	}	
+}
+	srand(time(NULL));
+	while(number<=9){
+		int i=rand()%9;
+		int j=rand()%9;
+		if(seat[i][j]=='-'){
+			seat[i][j]='*';
+			number++;	
+		}
+	}
+	printf("\\123456789\n");
+	for(int i=1;i<=9;i++){
+		printf("%d",10-i);
+		for(int j=1;j<=9;j++){
+		printf("%c",seat[i][j]);
+	}
+	printf("\n");
+}
+	system("pause");
+	system("cls");  
+}
+}
+}
