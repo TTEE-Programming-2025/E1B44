@@ -41,7 +41,7 @@ int main(void)
   }while(n<3);
   system("cls");/*清除當前畫面*/
   	int  number=0,h;
-	char seat[9][9],m;
+	char seat[9][9],m,l,e;
 		for(int i=0;i<9;i++){
 		for(int j=0;j<9;j++){
 		seat[i][j]='-';
@@ -99,6 +99,7 @@ int main(void)
 			}
 				
 			}
+			break;
 			case 2:
 			while(1){
 				int a=rand()%9;
@@ -110,6 +111,7 @@ int main(void)
 			}
 				
 			}
+			break;
 			case 3:
 			while(1){
 				int a=rand()%9;
@@ -121,6 +123,32 @@ int main(void)
 					break;
 			}	 
 			}
+			break;
+	       case 4:
+			int k=rand()%2;
+			while(k==0){
+				int a=rand()%9;
+				int n=rand()%6;
+				if(seat[a][n]=='-'&&seat[a][n+1]=='-'&&seat[a][n+2]=='-'&&seat[a][n+3]=='-'){
+					seat[a][n]='@'; 
+					seat[a][n+1]='@';
+					seat[a][n+2]='@';
+					seat[a][n+3]='@'; 
+					break;
+			}	 
+			} 
+				while(k==1){
+				int a=rand()%8;
+				int n=rand()%8;
+				if(seat[a][n]=='-'&&seat[a][n+1]=='-'&&seat[a+1][n]=='-'&&seat[a+1][n+1]=='-'){
+					seat[a][n]='@'; 
+					seat[a][n+1]='@';
+					seat[a+1][n]='@';
+					seat[a+1][n+1]='@'; 
+					break;
+			}	 
+			}
+		break;
 	}																	
 		printf("\\123456789\n");
 	for(int i=0;i<9;i++){
@@ -129,10 +157,28 @@ int main(void)
 		printf("%c",seat[i][j]);
 	}
 	printf("\n");
-}	 
+}
+   printf("是否滿意(y/n):");
+   scanf(" %c",&l);
+   if(l=='y')
+   for(int i=0;i<9;i++){
+		for(int j=0;j<9;j++){
+			if(seat[i][j]=='@')
+			seat[i][j]='*';
+		}
+	} 
+	if(l=='n')
+	for(int i=0;i<9;i++){
+		for(int j=0;j<9;j++){
+			if(seat[i][j]=='@')
+			seat[i][j]='-';
+		}
+	} 
+	system("pause");
+	system("cls");  	 
 	}	
-		
-	}
+}
+}
 }
 		
-}
+
