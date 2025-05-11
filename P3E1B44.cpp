@@ -177,8 +177,46 @@ int main(void)
 	system("pause");
 	system("cls");  	 
 	}	
-}
-}
-}
 		
+	}
+	 if(m=='c'||m=='C'){
+    system("cls");
+    char seats[7];
+    int x, y;
+    while (1) {
+        printf("請輸入座位 (列-行)，輸入 0-0 結束選擇: ");
+        scanf("%d-%d", &x, &y);
+        if ( x < 0 || x > 9 || y < 0 || y > 9) {
+            printf("格式錯誤，請重新輸入。\n");
+            continue;
+        }
+        if (x == 0 && y == 0) break; 
+
+        int a = 9 - x;
+        int n = y - 1;
+        if (seat[a][n] == '-') {
+            seat[a][n] = '@';
+        } else {
+            printf("此座位已被選，請重新輸入。\n");
+        }
+    }
+    printf("\\123456789\n");
+    for (int i = 0; i < 9; i++) {
+        printf("%d", 9 - i);
+        for (int j = 0; j < 9; j++) {
+            printf("%c", seat[i][j]);
+        }
+        printf("\n");
+    }
+   for(int i=0;i<9;i++){
+		for(int j=0;j<9;j++){
+			if(seat[i][j]=='@')
+			seat[i][j]='*';
+		}
+	} 
+	system("pause");
+	system("cls");
+    } 
+    }
+	} 
 
