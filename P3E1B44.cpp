@@ -185,8 +185,8 @@ int main(void)
     int x, y;
     while (1) {
         printf("請輸入座位 (列-行)，輸入 0-0 結束選擇: ");
-        scanf("%d-%d", &x, &y);
-        if ( x < 0 || x > 9 || y < 0 || y > 9) {
+        scanf("%s",seats);
+        if (sscanf(seats,"%d-%d",&x,&y)!=2||x < 0 || x > 9 || y < 0 || y > 9) {
             printf("格式錯誤，請重新輸入。\n");
             continue;
         }
@@ -217,6 +217,20 @@ int main(void)
 	system("pause");
 	system("cls");
     } 
+     if(m=='d'||m=='D'){ 
+        	system("cls"); 
+        	printf("continue? (y/n):");
+        	scanf(" %C",&l);
+        	while(l!='Y'&&l!='y'&&l!='n'&&l!='N'){ 
+        	printf("錯誤訊息重新輸入\n");
+        	printf("continue? (y/n):");
+        	scanf(" %C",&l);
+        }if(l=='y'||l=='Y'){
+          system("cls"); 
+      }
+      if(l=='n'||l=='N')
+      return 0;
+        }
     }
 	} 
 
