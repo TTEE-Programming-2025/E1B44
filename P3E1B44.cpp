@@ -180,8 +180,16 @@ int main(void)
             system("cls"); /*Clear the current screen*/ 
             char seats[7];
             int x, y;
+             printf("\\123456789\n"); /*Print out the 9x9 seat map*/ 
+            for (int i = 0; i < 9; i++) {
+                printf("%d", 9 - i);
+                for (int j = 0; j < 9; j++) {  
+                    printf("%c", seat[i][j]);
+                }
+                printf("\n");
+            }
             while (1) {/*Manually choose seats, and mark the selected seats as @*/
-                printf("Please enter seat (row-column), or enter 0-0 to finish: ");
+                printf("Please enter seat (row-column), or enter 0-0 to finish(Please press Enter once): ");
                 scanf("%s",seats);
                 if (sscanf(seats,"%d-%d",&x,&y)!=2||x < 0 || x > 9 || y < 0 || y > 9) {
                     printf("Invalid format, please re-enter.\n");
