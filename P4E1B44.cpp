@@ -9,7 +9,7 @@ struct p {
 	int eng;
 	float avg;	
 };
-struct p stu[10];
+struct p stu[10],temp;
 int n;
 void a(){
 	system("cls");/*清除當前畫面*/
@@ -103,12 +103,27 @@ void c(){
     }
     if (found==0) {
         printf("查無此姓名。\n");
-        system("pause");
-		system("cls");/*清除當前畫面*/ 
-        
     }
     system("pause");
 	system("cls");/*清除當前畫面*/ 
+}
+void d(){
+	for(int i=0;i<n;i++){
+		for(int j=0;j<n-i;j++){
+			if(stu[j+1].avg>stu[j].avg){
+				temp=stu[j];
+				stu[j]=stu[j+1];
+				stu[j+1]=temp;
+			}
+		}
+	}
+	 for(int i=0;i<n;i++){
+	 	     stu[i].avg=stu[i].math+stu[i].phy+stu[i].eng;
+             printf("姓名:%s學號:%d數學:%d物理:%d英文:%d平均:%.1f",stu[i].name,stu[i].id,stu[i].math,stu[i].phy,stu[i].eng,stu[i].avg/3.0);
+             printf("\n");
+        }
+        system("pause"); 
+		system("cls");/*清除當前畫面*/ 
 }
 
 
@@ -179,6 +194,10 @@ int main(void)
 if(m=='c'||m=='C'){
     system("cls");/*清除當前畫面*/ 
      c();
+}
+if(m=='d'||m=='D'){
+    system("cls");/*清除當前畫面*/ 
+     d();
 }
 }
 }
