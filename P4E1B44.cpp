@@ -108,6 +108,9 @@ void c(){
 	system("cls");/*清除當前畫面*/ 
 }
 void d(){
+for(int i=0;i<n;i++){
+	stu[i].avg=stu[i].math+stu[i].phy+stu[i].eng;
+}
 	for(int i=0;i<n;i++){
 		for(int j=0;j<n-i;j++){
 			if(stu[j+1].avg>stu[j].avg){
@@ -118,7 +121,6 @@ void d(){
 		}
 	}
 	 for(int i=0;i<n;i++){
-	 	     stu[i].avg=stu[i].math+stu[i].phy+stu[i].eng;
              printf("姓名:%s學號:%d數學:%d物理:%d英文:%d平均:%.1f",stu[i].name,stu[i].id,stu[i].math,stu[i].phy,stu[i].eng,stu[i].avg/3.0);
              printf("\n");
         }
@@ -198,6 +200,22 @@ if(m=='c'||m=='C'){
 if(m=='d'||m=='D'){
     system("cls");/*清除當前畫面*/ 
      d();
+}
+if(m=='e'||m=='E'){
+    system("cls");/*清除當前畫面*/ 
+	char l;
+	printf("確定離開? (y/n):");
+        	scanf(" %c",&l);
+        	while(l!='Y'&&l!='y'&&l!='n'&&l!='N'){
+        	printf("錯誤訊息重新輸入\n");
+        	printf("continue? (y/n):");
+        	scanf(" %c",&l);
+        }
+        if(l=='n'||l=='N'){
+          system("cls");/*清除當前畫面*/ 
+      }
+      if(l=='y'||l=='Y')
+      return 0;
 }
 }
 }
