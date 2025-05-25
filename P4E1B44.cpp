@@ -6,7 +6,8 @@ struct p {
 	int id;
 	int math;
 	int phy;
-	int eng;	
+	int eng;
+	float avg;	
 };
 struct p stu[10];
 int n;
@@ -77,6 +78,16 @@ system("cls");/*清除當前畫面*/
 system("cls");/*清除當前畫面*/		
 }
 }
+void b(){
+        for(int i=0;i<n;i++){
+             stu[i].math+stu[i].phy+stu[i].eng=stu[i].avg;
+             printf("姓名:%s學號:%d數學:%d物理:%d英文:%d平均:%.1f",stu[i].name,stu[i].id,stu[i].math,stu[i].phy,stu[i].eng,stu[i].avg/3.0);
+             printf("\n");
+        }
+        system("pause");
+		system("cls");/*清除當前畫面*/ 	        
+}
+
 int main(void)
 {
 	printf("$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
@@ -136,6 +147,10 @@ int main(void)
 	if(m=='a'||m=='A'){
     system("cls");/*清除當前畫面*/ 
      a();
+}
+	if(m=='b'||m=='B'){
+    system("cls");/*清除當前畫面*/ 
+     b();
 }
 }
 }
