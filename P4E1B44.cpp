@@ -228,14 +228,14 @@ if(m=='d'||m=='D'){
     system("cls");/*清除當前畫面*/ 
      d();
 }
-if(m=='e'||m=='E'){
+if(m=='e'||m=='E'){ 
     system("cls");/*清除當前畫面*/ 
 	char l;
 	printf("確定離開? (y/n):");
         	scanf(" %c",&l);
         	while(l!='Y'&&l!='y'&&l!='n'&&l!='N'){
         	printf("錯誤訊息重新輸入\n");
-        	printf("continue? (y/n):");
+        	printf("確定離開? (y/n):");
         	scanf(" %c",&l);
         }
         if(l=='n'||l=='N'){
